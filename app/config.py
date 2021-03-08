@@ -5,7 +5,8 @@ class Config(object):
     DEBUG = False
     SECRET_KEY = os.environ.get('SECRET_KEY') or 'SomeSecretKey'
     SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or 'postgresql://lab5:Password01@localhost/lab5'
-    SQLALCHEMY_TRACK_MODIFICATIONS = False # This is just here to suppress a warning from SQLAlchemy as it will soon be removed
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
+    # This is just here to suppress a warning from SQLAlchemy as it will soon be removed
 
 class DevelopmentConfig(Config):
     """Development Config that extends the Base Config Object"""
